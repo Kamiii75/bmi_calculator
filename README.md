@@ -1,16 +1,28 @@
 ## BMI Calculator
 
-A new Flutter project.
+bmi calculator in Flutter
 
-## Getting Started
+# Using HydratedBloc
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+![Home Page](https://github.com/Kamiii75/bmi_calculator/blob/d2f6e338c51254330311e2b12e56afd57b4fcb7a/screenshots/Screenshot%202023-11-07%20at%2011.11.04%E2%80%AFAM.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### --------------- 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Result DialogBox UnderWeight](https://github.com/Kamiii75/bmi_calculator/blob/d2f6e338c51254330311e2b12e56afd57b4fcb7a/screenshots/Screenshot%202023-11-07%20at%2011.09.17%E2%80%AFAM.png)
+
+### ---------------
+
+![Result DialogBox NormalWeight](https://github.com/Kamiii75/bmi_calculator/blob/d2f6e338c51254330311e2b12e56afd57b4fcb7a/screenshots/Screenshot%202023-11-07%20at%2011.08.58%E2%80%AFAM.png)
+
+### ---------------
+
+![Result DialogBox OverWeight](https://github.com/Kamiii75/bmi_calculator/blob/d2f6e338c51254330311e2b12e56afd57b4fcb7a/screenshots/Screenshot%202023-11-07%20at%2011.08.45%E2%80%AFAM.png)
+
+### ---------------
+
+![Result DialogBox Obese](https://github.com/Kamiii75/bmi_calculator/blob/d2f6e338c51254330311e2b12e56afd57b4fcb7a/screenshots/Screenshot%202023-11-07%20at%2011.08.26%E2%80%AFAM.png)
+
+
+
+
