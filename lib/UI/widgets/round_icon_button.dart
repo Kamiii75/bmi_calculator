@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:neumorphic_ui/neumorphic_ui.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -23,7 +22,7 @@ class RoundIconButton extends StatelessWidget {
           padding:  EdgeInsets.all(15.sp),
           child: NeumorphicIcon(
             icon,
-            style: ConstNeumorphic.neumorphicStyle
+            style: ConstNeumorphic.neumorphicIconStyle
                 .copyWith(color: ConstColors.kWhite),
             size: 20.sp,
           ),

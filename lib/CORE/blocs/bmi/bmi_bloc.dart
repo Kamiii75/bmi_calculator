@@ -1,6 +1,4 @@
-import 'package:bmi_calculator/CORE/utils/enum.dart';
 import 'package:equatable/equatable.dart';
-
 import '../bloc_export.dart';
 
 part 'bmi_event.dart';

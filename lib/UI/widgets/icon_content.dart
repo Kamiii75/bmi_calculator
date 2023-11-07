@@ -1,4 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:neumorphic_ui/neumorphic_ui.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+import '../../CORE/constants/const_colors.dart';
+import '../../CORE/constants/const_neumorphic.dart';
 
 
 class IconContent extends StatelessWidget {
@@ -11,19 +14,25 @@ class IconContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        Icon(
+        NeumorphicIcon(
           icon,
-          size:80.0,
-          color:Color(0xFFFFFFFF),
+          style: ConstNeumorphic.neumorphicIconStyle
+              .copyWith(color: ConstColors.kWhite),
+          size: 40.sp,
         ),
-        SizedBox(
-          height:15.0,
-        ),
-        Text(label,
 
-        )
+        SizedBox(
+          height:2.h,
+        ),
+        NeumorphicText(
+          label,
+          textAlign: TextAlign.justify,
+          textStyle: NeumorphicTextStyle(
+              fontSize: 18.sp, fontWeight: FontWeight.bold),
+          style: const NeumorphicStyle(color: Colors.white),
+        ),
       ],
     );
   }

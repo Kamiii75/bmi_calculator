@@ -7,5 +7,4 @@ class ConstColors{
   static const Color kInActiveColor = Color(0xFF252554);
 
 
-  static const Color  bottomContainerColor = Color(0xFFEB1555);
 }

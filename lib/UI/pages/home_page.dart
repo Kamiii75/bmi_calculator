@@ -26,10 +26,10 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.all(15.sp),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
+                  children: [
                     Expanded(
                         child: Row(
-                      children: <Widget>[
+                      children: [
                         Expanded(
                           child: ReusableCard(
                             onPress: () => sl<BmiBloc>().add(EventMaleGender()),
@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
                         color: ConstColors.kPrimaryColor,
                         childCard: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
+                          children: [
                             NeumorphicText(
                               "Height",
                               style: ConstNeumorphic.neumorphicBtnStyle
@@ -73,9 +73,8 @@ class HomePage extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.baseline,
-                              // to specify whom to align...
                               textBaseline: TextBaseline.alphabetic,
-                              children: <Widget>[
+                              children: [
                                 NeumorphicText(
                                   state.numbers.toString(),
                                   style: ConstNeumorphic.neumorphicBtnStyle
@@ -95,7 +94,7 @@ class HomePage extends StatelessWidget {
                               ],
                             ),
                             SliderTheme(
-                              // .of() ->it will return the data from the closes theme
+
                               data: SliderTheme.of(context).copyWith(
                                 thumbShape: const RoundSliderThumbShape(
                                     enabledThumbRadius: 14.0),
@@ -124,13 +123,13 @@ class HomePage extends StatelessWidget {
                     ),
                     Expanded(
                         child: Row(
-                      children: <Widget>[
+                      children: [
                         Expanded(
                           child: ReusableCard(
                             color: ConstColors.kPrimaryColor,
                             childCard: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
+                              children: [
                                 NeumorphicText(
                                   "Weight",
                                   style: ConstNeumorphic.neumorphicBtnStyle
@@ -149,7 +148,7 @@ class HomePage extends StatelessWidget {
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
+                                  children: [
                                     RoundIconButton(
                                       icon: FontAwesomeIcons.minus,
                                       onPressed: () => sl<BmiBloc>()
@@ -175,7 +174,7 @@ class HomePage extends StatelessWidget {
                             color: ConstColors.kPrimaryColor,
                             childCard: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
+                              children: [
                                 NeumorphicText(
                                   "Age",
                                   style: ConstNeumorphic.neumorphicBtnStyle
@@ -194,7 +193,7 @@ class HomePage extends StatelessWidget {
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
+                                  children: [
                                     RoundIconButton(
                                       icon: FontAwesomeIcons.minus,
                                       onPressed: () => sl<BmiBloc>()
@@ -218,23 +217,26 @@ class HomePage extends StatelessWidget {
                       ],
                     )),
                     SizedBox(height: 1.h),
-                    CustomButton(
-                        onPressed: () {
-                          Calculate cal = Calculate(
-                              height: state.numbers,
-                              weight: state.counterWeight);
+                    Padding(
+                      padding:  EdgeInsets.symmetric(horizontal: 15.sp),
+                      child: CustomButton(
+                          onPressed: () {
+                            Calculate cal = Calculate(
+                                height: state.numbers,
+                                weight: state.counterWeight);
 
-                          showDialog(
-                              context: context,
-                              builder: (context) => ResultsDialogBox(
-                                    bmiResult: cal.calculateBmi(),
-                                    resultText: cal.getResult(),
-                                    resultInterpretation:
-                                        cal.getInterpretation(),
-                                  ));
+                            showDialog(
+                                context: context,
+                                builder: (context) => ResultsDialogBox(
+                                      bmiResult: cal.calculateBmi(),
+                                      resultText: cal.getResult(),
+                                      resultInterpretation:
+                                          cal.getInterpretation(),
+                                    ));
 
-                        },
-                        text: "Calculate"),
+                          },
+                          text: "Calculate"),
+                    ),
                     SizedBox(height: 1.h),
                   ]),
             ),
